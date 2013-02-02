@@ -20,7 +20,7 @@ var webdriver = require('selenium-node-webdriver');
 var driver = new webdriver.Builder().
     usingServer('http://localhost:4444/wd/hub').
     withCapabilities({
-      'browserName': 'chrome',
+      'browserName': 'phantomjs',
       'version': '',
       'platform': 'ANY',
       'javascriptEnabled': true
