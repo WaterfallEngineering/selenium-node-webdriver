@@ -23,7 +23,9 @@ phantomjs --webdriver=4444 &
 node node_modules/selenium-node-webdriver/examples/hello.js
 ```
 
-`examples/hello.js`
+This example (`examples/hello.js`) queries Google for 'webdriver' and returns
+the titles of the results.
+
 ```javascript
 var WebDriver = require('selenium-node-webdriver');
 
