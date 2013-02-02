@@ -10,10 +10,15 @@ implementation that ships with [Selenium](http://code.google.com/p/selenium/).
 - [Node.js](http://nodejs.org/)
 - [PhantomJS 1.8+](http://phantomjs.org/)
 
-## Usage
+## Installation
 
 ```sh
 npm install selenium-node-webdriver
+```
+
+## Usage
+
+```sh
 phantomjs --webdriver=4444 &
 node node_modules/selenium-node-webdriver/examples/hello.js
 ```
