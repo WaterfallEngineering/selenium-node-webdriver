@@ -1,8 +1,12 @@
 {
     "name": "selenium-node-webdriver",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Lon Ingram <lon@waterfallmobile.com>",
     "description": "Node.js WebDriver client from the Selenium project",
-    "main": "./lib/node/webdriver",
-    "license": "http://www.apache.org/licenses/LICENSE-2.0"
+    "main": "./lib/index",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+
+    "dependencies": {
+        "lodash": "1.0.0-rc.3"
+    }
 }

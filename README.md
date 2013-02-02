@@ -9,7 +9,6 @@ This repo is simply a pre-built Selenium WebDriver.
 ```sh
 npm install selenium-node-webdriver
 phantomjs --webdriver=4444 &
-sleep 2
 node node_modules/selenium-node-webdriver/examples/hello.js
 ```
 
