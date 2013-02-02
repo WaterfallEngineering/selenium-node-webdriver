@@ -1,19 +1,30 @@
-var wd = require('selenium-node-webdriver');
+var WebDriver = require('selenium-node-webdriver');
 
-wd.build(null, function (driver) {
-    driver.get('http://www.google.com').
-        then(function () {
-            return driver.
-                findElement(wd.webdriver.By.name('q')).sendKeys('webdriver');
-        }).
-        then(function () {
-            return driver.findElement(wd.webdriver.By.name('btnG')).click();
-        }).
-        then(function () {
-            return driver.getTitle();
-        }).
-        then(function (title) {
-            console.log('Title:', title);
-            driver.quit();
-        });
-});
+WebDriver().
+    then(function (driver) {
+        driver.get('http://www.google.com').
+            then(function () {
+                return driver.
+                    findElement(driver.webdriver.By.name('q')).
+                    sendKeys('webdriver');
+            }).
+            then(function () {
+                return driver.
+                    findElement(driver.webdriver.By.name('btnG')).click();
+            }).
+            then(function () {
+                return driver.executeScript(function () {
+                    return Array.prototype.slice.
+                        call(document.querySelectorAll('h3.r')).
+                        map(function (result) {
+                            return result.textContent;
+                        });
+                });
+            }).
+            then(function (results) {
+                results.forEach(function (result) {
+                    console.log(result);
+                });
+                driver.quit();
+            });
+    });
