@@ -1,0 +1,8 @@
+{
+    "name": "selenium-node-webdriver",
+    "version": "0.1.0",
+    "author": "Lon Ingram <lon@waterfallmobile.com>",
+    "description": "Node.js WebDriver client from the Selenium project",
+    "main": "./lib/node/webdriver",
+    "license": "http://www.apache.org/licenses/LICENSE-2.0"
+}
