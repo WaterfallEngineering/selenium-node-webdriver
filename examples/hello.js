@@ -1,6 +1,6 @@
-var WebDriver = require('selenium-node-webdriver');
+var webdriver = require('selenium-node-webdriver');
 
-WebDriver().
+webdriver().
     then(function (driver) {
         driver.get('http://www.google.com').
             then(function () {
